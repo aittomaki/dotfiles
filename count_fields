@@ -1,0 +1,12 @@
+#!/bin/bash
+# Script for counting number of columns on first line of a file
+# Usage: count_fields [fieldseparator] <file>
+# Assumes tab separated fields by default
+
+if [[ $# -gt 1 ]]
+then
+    head -1 $2 | awk "BEGIN { FS = \"$1\" } ; { print NF }"
+else
+    head -1 $1 | awk 'BEGIN { FS = "\t" } ; { print NF }'
+fi
+
