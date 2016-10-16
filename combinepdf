@@ -1,0 +1,13 @@
+#!/bin/bash
+# Script for combining any number of PDF files into one PDF.
+# Uses Postscript which must be in path.
+
+if [ 2 -gt $# ]
+then
+    echo "Not enough arguments!" 1>&2
+    echo "Usage: combinepdf <pdfs-to-combine> <output-file>" 1>&2
+    exit 1
+fi
+
+gs -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=${@: -1} -dBATCH ${@: 1:$#-1}
+
