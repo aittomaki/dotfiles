@@ -1,0 +1,84 @@
+# Env settings that may be required for using Brew versions of certain software
+# NOTE! This may be system/brew version specific!
+
+## PYTHON3 (macOS comes with Python 2)
+# Python has been installed as
+#   /usr/local/bin/python3
+# Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+# `python3`, `python3-config`, `pip3` etc., respectively, have been installed into
+#   /usr/local/opt/python/libexec/bin
+
+
+## OPENSLL (Apple has deprecated, now uses own crypto libraries)
+
+# If you need to have openssl first in your PATH run:
+#export PATH="/usr/local/opt/openssl/bin:$PATH"
+# For compilers to find openssl you may need to set:
+#export LDFLAGS="-L/usr/local/opt/openssl/lib"
+#export CPPFLAGS="-I/usr/local/opt/openssl/include"
+# For pkg-config to find openssl you may need to set:
+#export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
+
+
+## CURL (macOS comes with a version)
+
+# If you need to have curl first in your PATH run:
+#export PATH="/usr/local/opt/curl/bin:$PATH"
+# For compilers to find curl you may need to set:
+#export LDFLAGS="-L/usr/local/opt/curl/lib"
+#export CPPFLAGS="-I/usr/local/opt/curl/include"
+# For pkg-config to find curl you may need to set:
+#export PKG_CONFIG_PATH="/usr/local/opt/curl/lib/pkgconfig"
+
+
+## LLVM (macOS comes with a version)
+
+# If you need to have llvm first in your PATH run:
+#export PATH="/usr/local/opt/llvm/bin:$PATH"
+# For compilers to find llvm you may need to set:
+#export LDFLAGS="-L/usr/local/opt/llvm/lib"
+#export CPPFLAGS="-I/usr/local/opt/llvm/include"
+# To use the bundled libc++ please add the following LDFLAGS:
+#export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+
+
+## SQLITE3 (MacOs comes with older version)
+
+# If you need to have sqlite first in your PATH run:
+#export PATH="/usr/local/opt/sqlite/bin:$PATH"
+# For compilers to find sqlite you may need to set:
+#export LDFLAGS="-L/usr/local/opt/sqlite/lib"
+#export CPPFLAGS="-I/usr/local/opt/sqlite/include"
+# For pkg-config to find sqlite you may need to set:
+#export PKG_CONFIG_PATH="/usr/local/opt/sqlite/lib/pkgconfig"
+
+
+## TCL-TK (MacOs comes with older version)
+
+# If you need to have tcl-tk first in your PATH run:
+#export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
+# For compilers to find tcl-tk you may need to set:
+#export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
+#export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
+# For pkg-config to find tcl-tk you may need to set:
+#export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
+
+
+# READLINE (macOS provides the BSD libedit library)
+
+# For compilers to find readline you may need to set:
+#export LDFLAGS="-L/usr/local/opt/readline/lib"
+#export CPPFLAGS="-I/usr/local/opt/readline/include"
+# For pkg-config to find readline you may need to set:
+#export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
+
+
+## NSS (macOS comes with a version, and Firefox has problems with Brew version)
+
+# If you need to have nss first in your PATH run:
+#export PATH="/usr/local/opt/nss/bin:$PATH"
+# For compilers to find nss you may need to set:
+#export LDFLAGS="-L/usr/local/opt/nss/lib"
+#export CPPFLAGS="-I/usr/local/opt/nss/include"
+# For pkg-config to find nss you may need to set:
+#export PKG_CONFIG_PATH="/usr/local/opt/nss/lib/pkgconfig"
